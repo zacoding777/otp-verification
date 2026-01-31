@@ -86,7 +86,8 @@ function verifyOTP() {
   }
 
   if (input === generatedOTP) {
-    alert("Verifikasi BERHASIL ✅");
+  window.location.href = "success.html";
+
   } else {
     alert("OTP salah ❌");
   }
