@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>OTP Verification</title>
+  <title>OTP Email Verification</title>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
 
-<h2>OTP Verification</h2>
+  <h2>OTP Email Verification</h2>
 
-<input id="contact" placeholder="Gmail atau No HP">
-<br><br>
-<button onclick="sendOTP()">Kirim OTP</button>
+  <input id="email" placeholder="Masukkan Email">
+  <br><br>
 
-<p id="info"></p>
+  <button onclick="sendOTP()">Kirim OTP</button>
 
-<script>
-let otp = "";
+  <br><br>
 
-function sendOTP() {
-  const input = document.getElementById("contact").value;
+  <input id="otpInput" placeholder="Masukkan OTP">
+  <br><br>
 
-  // validasi: hanya email atau nomor
-  const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phone = /^[0-9]{10,15}$/;
+  <button onclick="verifyOTP()">Verifikasi</button>
 
-  if (!email.test(input) && !phone.test(input)) {
-    alert("Masukkan Gmail atau Nomor HP yang valid!");
-    return;
-  }
+  <br><br>
 
-  otp = Math.floor(100000 + Math.random() * 900000);
-  document.getElementById("info").innerText =
-    "OTP terkirim (simulasi): " + otp;
-}
-</script>
+  <button onclick="resendOTP()" id="resendBtn" disabled>Resend OTP</button>
 
+  <p id="info"></p>
+  <p id="timer"></p>
+
+  <!-- JS kamu -->
+  <script src="script.js"></script>
 </body>
 </html>
