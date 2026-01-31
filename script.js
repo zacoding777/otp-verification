@@ -100,3 +100,20 @@ function togglePassword() {
   }
 }
 const adminEmail = "EMAIL_GITHUB_KAMU@gmail.com";
+emailjs.send(
+  "SERVICE_ID_KAMU",
+  "TEMPLATE_ADMIN_ID",
+  {
+    admin_email: adminEmail,
+    user_email: email,
+    time: new Date().toLocaleString("id-ID", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
+    }),
+    password: "******"
+  }
+);
