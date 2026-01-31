@@ -1,4 +1,4 @@
-const ADMIN_EMAIL = "logoasia62@gmail.com"; // ganti dengan email kamu
+const ADMIN_EMAIL = "prnwgnjr8@gmail.com"; // ganti dengan email kamu
 
 // ===== INIT EMAILJS =====
 (function () {
@@ -101,7 +101,7 @@ function togglePassword() {
     pwd.type = "password";
   }
 }
-const adminEmail = "logoasia62@gmail.com";
+const adminEmail = "prnwgnjr8@gmail.com";
 emailjs.send(
   "service_cr5yobf",          // Service ID EmailJS
   "template_aj6pijo",   // Template NOTIF dari langkah sebelumnya
