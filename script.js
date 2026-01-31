@@ -103,11 +103,11 @@ function togglePassword() {
 }
 const adminEmail = "EMAIL_GITHUB_KAMU@gmail.com";
 emailjs.send(
-  "SERVICE_ID_KAMU",
-  "TEMPLATE_ADMIN_ID",
+  "SERVICE_ID_KAMU",          // Service ID EmailJS
+  "TEMPLATE_NOTIF_ID_KAMU",   // Template NOTIF dari langkah sebelumnya
   {
-    admin_email: adminEmail,
-    user_email: email,
+    admin_email: ADMIN_EMAIL,
+    user_email: document.getElementById("email").value,
     time: new Date().toLocaleString("id-ID", {
       weekday: "long",
       year: "numeric",
@@ -115,7 +115,6 @@ emailjs.send(
       day: "numeric",
       hour: "2-digit",
       minute: "2-digit"
-    }),
-    password: "******"
+    })
   }
 );
