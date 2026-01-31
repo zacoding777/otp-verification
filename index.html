@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OTP Verification</title>
+</head>
+<body>
+
+<h2>OTP Verification</h2>
+
+<input id="contact" placeholder="Gmail atau No HP">
+<br><br>
+<button onclick="sendOTP()">Kirim OTP</button>
+
+<p id="info"></p>
+
+<script>
+let otp = "";
+
+function sendOTP() {
+  const input = document.getElementById("contact").value;
+
+  // validasi: hanya email atau nomor
+  const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phone = /^[0-9]{10,15}$/;
+
+  if (!email.test(input) && !phone.test(input)) {
+    alert("Masukkan Gmail atau Nomor HP yang valid!");
+    return;
+  }
+
+  otp = Math.floor(100000 + Math.random() * 900000);
+  document.getElementById("info").innerText =
+    "OTP terkirim (simulasi): " + otp;
+}
+</script>
+
+</body>
+</html>
