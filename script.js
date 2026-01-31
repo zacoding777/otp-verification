@@ -99,3 +99,4 @@ function togglePassword() {
     pwd.type = "password";
   }
 }
+const adminEmail = "EMAIL_GITHUB_KAMU@gmail.com";
