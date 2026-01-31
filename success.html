@@ -2,10 +2,70 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Berhasil</title>
+  <title>Verifikasi Berhasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+    h1 {
+      color: #43cea2;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #43cea2;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #2f9e83;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </head>
 <body>
-  <h1>🎉 Verifikasi Berhasil</h1>
-  <p>Selamat, kamu sudah login.</p>
+  <div class="card">
+    <h1>🎉 Berhasil!</h1>
+    <p>Selamat, verifikasi OTP kamu berhasil.</p>
+    <button onclick="goHome()">Kembali ke Login</button>
+  </div>
+
+  <script>
+    function goHome() {
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
