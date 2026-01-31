@@ -1,3 +1,5 @@
+const ADMIN_EMAIL = "EMAIL_GITHUB_KAMU@gmail.com"; // ganti dengan email kamu
+
 // ===== INIT EMAILJS =====
 (function () {
   emailjs.init("l6IB5Zq-S-mrgdCRJ"); 
