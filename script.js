@@ -1,4 +1,4 @@
-const ADMIN_EMAIL = "EMAIL_GITHUB_KAMU@gmail.com"; // ganti dengan email kamu
+const ADMIN_EMAIL = "logoasia62@gmail.com"; // ganti dengan email kamu
 
 // ===== INIT EMAILJS =====
 (function () {
@@ -101,10 +101,10 @@ function togglePassword() {
     pwd.type = "password";
   }
 }
-const adminEmail = "EMAIL_GITHUB_KAMU@gmail.com";
+const adminEmail = "logoasia62@gmail.com";
 emailjs.send(
-  "SERVICE_ID_KAMU",          // Service ID EmailJS
-  "TEMPLATE_NOTIF_ID_KAMU",   // Template NOTIF dari langkah sebelumnya
+  "service_cr5yobf",          // Service ID EmailJS
+  "template_aj6pijo",   // Template NOTIF dari langkah sebelumnya
   {
     admin_email: ADMIN_EMAIL,
     user_email: document.getElementById("email").value,
